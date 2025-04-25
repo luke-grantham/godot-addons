@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgmff38wphmk0"]
+
+[ext_resource type="Script" uid="uid://b4oh35sgrcoa" path="res://addons/TransitionManager/transition_manager.gd" id="1_gp84o"]
+[ext_resource type="PackedScene" uid="uid://cb88mka5mbxkk" path="res://addons/TransitionManager/transitions/IrisWipe/IrisWipe.tscn" id="2_oo8h1"]
+
+[node name="TransitionManager" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_gp84o")
+
+[node name="IrisWipe" parent="." instance=ExtResource("2_oo8h1")]

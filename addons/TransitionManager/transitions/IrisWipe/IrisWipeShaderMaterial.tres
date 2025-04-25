@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bbw7o1qoll1v2"]
+
+[ext_resource type="Shader" uid="uid://d0b0mhahnmb4" path="res://addons/TransitionManager/transitions/IrisWipe/iris_wipe.gdshader" id="1_q6okt"]
+
+[resource]
+shader = ExtResource("1_q6okt")
+shader_parameter/pos = Vector2(576, 324)
+shader_parameter/viewport_size = Vector2(1152, 648)
+shader_parameter/r = 0.0
