@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://de74t34hw2hpg"]
+
+[ext_resource type="Script" uid="uid://cp12o0yd6boo3" path="res://addons/CreditBox/credit_box.gd" id="1_icogj"]
+[ext_resource type="Script" uid="uid://5fv6dks5jm3i" path="res://addons/CreditBox/CreditData.gd" id="2_sb56t"]
+[ext_resource type="Texture2D" uid="uid://efklefqv2ipw" path="res://addons/CreditBox/discord-shrink.png" id="3_ncdwe"]
+
+[sub_resource type="Resource" id="Resource_u01gw"]
+script = ExtResource("2_sb56t")
+credit_name = "@choccymilk"
+role = "Programmer"
+icon = ExtResource("3_ncdwe")
+metadata/_custom_type_script = "uid://5fv6dks5jm3i"
+
+[sub_resource type="Resource" id="Resource_jckah"]
+script = ExtResource("2_sb56t")
+credit_name = "@AnotherDude"
+role = "Artist"
+icon = ExtResource("3_ncdwe")
+metadata/_custom_type_script = "uid://5fv6dks5jm3i"
+
+[node name="CreditBox" type="GridContainer"]
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 3
+script = ExtResource("1_icogj")
+credits = Array[ExtResource("2_sb56t")]([SubResource("Resource_u01gw"), SubResource("Resource_jckah")])

@@ -6,4 +6,4 @@
 shader = ExtResource("1_q6okt")
 shader_parameter/pos = Vector2(576, 324)
 shader_parameter/viewport_size = Vector2(1152, 648)
-shader_parameter/r = 0.0
+shader_parameter/r = 1000.0
