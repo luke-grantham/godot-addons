@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://x4fyk72s5jpc"]
+[gd_scene load_steps=3 format=3 uid="uid://x4fyk72s5jpc"]
 
 [ext_resource type="Script" uid="uid://b0cws2a8v70kt" path="res://Demo/TransitionManagerDemo/panel.gd" id="1_aq2ld"]
+[ext_resource type="PackedScene" uid="uid://bi2fqo0bb0ixe" path="res://addons/ControlWiggleComponent/ControlWiggleComponent.tscn" id="2_dm5du"]
 
 [node name="Test" type="Node2D"]
 
@@ -20,17 +21,25 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "To Black"
 
+[node name="ControlWiggleComponent" parent="CanvasLayer/Panel/VBoxContainer/ToBlack" instance=ExtResource("2_dm5du")]
+
 [node name="ToGame" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "To Game"
+
+[node name="ControlWiggleComponent" parent="CanvasLayer/Panel/VBoxContainer/ToGame" instance=ExtResource("2_dm5du")]
 
 [node name="SetBlack" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Set Black"
 
+[node name="ControlWiggleComponent" parent="CanvasLayer/Panel/VBoxContainer/SetBlack" instance=ExtResource("2_dm5du")]
+
 [node name="SetGame" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Set Game"
+
+[node name="ControlWiggleComponent" parent="CanvasLayer/Panel/VBoxContainer/SetGame" instance=ExtResource("2_dm5du")]

@@ -1,7 +1,7 @@
-﻿# Godot Game Engine Addons (v4.x)
+# Godot Game Engine Addons (v4.x)
 
 ### How to use
-Copy directories from the addons folder to the addons folder in your own project.
+Copy directories in the addons directory to the addons directory in your own project.
 For directions on using individual addons, see README.md in each addon directory
 
 # Current Addons
@@ -14,3 +14,6 @@ For directions on using individual addons, see README.md in each addon directory
 
 ### Credit Box
 For showing credits. Saves some time setting up all the control nodes.
+
+### ControlWiggleComponent
+Add this to a Control node to make it wiggle when you mouse over it.

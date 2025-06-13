@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi2fqo0bb0ixe"]
+
+[ext_resource type="Script" uid="uid://bv3kgnico2pje" path="res://addons/ControlWiggleComponent/control_wiggle_component.gd" id="1_nngpj"]
+
+[node name="ControlWiggleComponent" type="Node"]
+script = ExtResource("1_nngpj")
+wiggle_duration = 0.04
