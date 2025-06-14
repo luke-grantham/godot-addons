@@ -74,7 +74,6 @@ func wiggle():
 
 
         if should_shake:
-            print("wiggle in progress = " + str(wiggle_in_progress))
             wiggle_tween = reset_tween(wiggle_tween)
             wiggle_tween.tween_property(parent, "rotation", wiggle_rotation, wiggle_duration)
             wiggle_tween.chain()
