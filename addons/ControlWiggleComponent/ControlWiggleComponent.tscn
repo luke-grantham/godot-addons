@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi2fqo0bb0ixe"]
+[gd_scene load_steps=3 format=3 uid="uid://bi2fqo0bb0ixe"]
 
 [ext_resource type="Script" uid="uid://bv3kgnico2pje" path="res://addons/ControlWiggleComponent/control_wiggle_component.gd" id="1_nngpj"]
+[ext_resource type="AudioStream" uid="uid://4vvhx8mrky2y" path="res://addons/ControlWiggleComponent/ui_click_pop_grantlerr.wav" id="2_mpjpn"]
 
 [node name="ControlWiggleComponent" type="Node"]
 script = ExtResource("1_nngpj")
-wiggle_duration = 0.04
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mpjpn")
