@@ -6,3 +6,4 @@
 *~
 *.depren
 target/
+.DS_Store

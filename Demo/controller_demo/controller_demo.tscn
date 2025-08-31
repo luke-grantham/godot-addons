@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cap0vibjrtqru"]
+
+[ext_resource type="Texture2D" uid="uid://dh3iq4mfgvhf" path="res://icon.svg" id="1_siixp"]
+[ext_resource type="Script" uid="uid://4vderj2yugc2" path="res://Demo/controller_demo/smooth_mover.gd" id="2_0861j"]
+[ext_resource type="Script" uid="uid://cyti3ysglmk4u" path="res://Demo/controller_demo/spring_mover.gd" id="3_to4if"]
+
+[node name="ControllerDemo" type="Node2D"]
+
+[node name="SmoothMover" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(196, 107)
+scale = Vector2(0.296875, 0.273438)
+texture = ExtResource("1_siixp")
+script = ExtResource("2_0861j")
+
+[node name="SpringMover" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(217, 498)
+scale = Vector2(0.296875, 0.273438)
+texture = ExtResource("1_siixp")
+script = ExtResource("3_to4if")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(531, 289)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Red = Exponential Smoothing
+Blue = Spring
+
+Move mouse to test"

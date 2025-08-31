@@ -17,3 +17,6 @@ For showing credits. Saves some time setting up all the control nodes.
 
 ### ControlWiggleComponent
 Add this to a Control node to make it wiggle when you mouse over it.
+
+### Interpolation Controllers
+Interpolate float values over time
