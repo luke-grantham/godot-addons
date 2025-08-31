@@ -4,7 +4,7 @@ signal transition_done(transition_name: String, anim_name: String)
 
 func _ready() -> void:
     for child in get_children():
-        if child is Transition:
+        if child is MyTransition:
             child.transition_done.connect(func(t_name, a_name): transition_done.emit(t_name, a_name))
 
 func to_black(transition_name: NodePath):

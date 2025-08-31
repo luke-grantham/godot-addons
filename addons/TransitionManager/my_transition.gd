@@ -1,4 +1,4 @@
-class_name Transition
+class_name MyTransition
 extends CanvasItem
 
 signal transition_done(transition_name: String, anim_name: String)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cb88mka5mbxkk"]
 
-[ext_resource type="Script" uid="uid://bqp30tdfqdib1" path="res://addons/TransitionManager/transition.gd" id="1_jv58r"]
+[ext_resource type="Script" uid="uid://bqp30tdfqdib1" path="res://addons/TransitionManager/my_transition.gd" id="1_jv58r"]
 [ext_resource type="Material" uid="uid://bbw7o1qoll1v2" path="res://addons/TransitionManager/transitions/IrisWipe/IrisWipeShaderMaterial.tres" id="1_se31l"]
 
 [sub_resource type="Animation" id="Animation_se31l"]
