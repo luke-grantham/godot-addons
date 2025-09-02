@@ -17,3 +17,4 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 TransitionManager="*res://addons/TransitionManager/TransitionManager.tscn"
 AudioManager="*res://addons/audio_manager/audio_manager.tscn"
+MenuManager="*res://addons/menu_manager/menu_manager.tscn"

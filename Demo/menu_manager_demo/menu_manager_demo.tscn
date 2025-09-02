@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://p0oag158j0on"]
+
+[ext_resource type="Script" uid="uid://rpjl14md6imb" path="res://Demo/menu_manager_demo/menu_manager_demo.gd" id="1_7pqnx"]
+[ext_resource type="Script" uid="uid://dmwtxgjtmggss" path="res://Demo/menu_manager_demo/settings_menu.gd" id="1_pxer7"]
+[ext_resource type="Script" uid="uid://iilr4wpms1kv" path="res://Demo/menu_manager_demo/credits_menu.gd" id="2_uxiku"]
+[ext_resource type="Script" uid="uid://dng47bntnkg4m" path="res://Demo/menu_manager_demo/multi_one.gd" id="4_m78qw"]
+[ext_resource type="Script" uid="uid://bqfg8u5ypy2d2" path="res://Demo/menu_manager_demo/multi_two.gd" id="5_ykebe"]
+
+[node name="MenuManagerDemo" type="Node2D"]
+script = ExtResource("1_7pqnx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SettingsMenu" type="PanelContainer" parent="CanvasLayer"]
+offset_right = 314.0
+offset_bottom = 248.0
+script = ExtResource("1_pxer7")
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsMenu"]
+layout_mode = 2
+text = "settings"
+
+[node name="CreditsMenu" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 520.0
+offset_top = 224.0
+offset_right = 851.0
+offset_bottom = 400.0
+script = ExtResource("2_uxiku")
+menu_type = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/CreditsMenu"]
+layout_mode = 2
+text = "Credits"
+
+[node name="MultiOne" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 398.0
+offset_right = 432.0
+offset_bottom = 574.0
+script = ExtResource("4_m78qw")
+menu_type = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MultiOne"]
+layout_mode = 2
+text = "multi 1"
+
+[node name="MultiTwo" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 447.0
+offset_top = 467.0
+offset_right = 778.0
+offset_bottom = 643.0
+script = ExtResource("5_ykebe")
+menu_type = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MultiTwo"]
+layout_mode = 2
+text = "multi 2
+"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 907.0
+offset_top = 51.0
+offset_right = 1114.0
+offset_bottom = 327.0
+
+[node name="ShowSettings" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "Show settings"
+
+[node name="HideSettings" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "hide settings"
+
+[node name="ShowCredits" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "show credits"
+
+[node name="HideCredits" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "hide credits"
+
+[node name="ShowMulti" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "show multi"
+
+[node name="HideMulti" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "hide multi"
+
+[node name="HideAll" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "hide all"
+
+[node name="ShowSettingsHideOthers" type="Button" parent="CanvasLayer/ButtonContainer"]
+layout_mode = 2
+text = "show settings hide others"

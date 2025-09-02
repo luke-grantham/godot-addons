@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2qhlfhpoi8jq"]
+
+[ext_resource type="Script" uid="uid://crbmoma8244ft" path="res://addons/menu_manager/menu_manager.gd" id="1_bt4vd"]
+
+[node name="WindowManager" type="Node"]
+script = ExtResource("1_bt4vd")

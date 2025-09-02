@@ -24,3 +24,6 @@ Interpolate float values over time
 
 ### MyUtil
 Some helpful static functions 
+
+### Menu Manager
+Manage the visibility of groups of Control nodes. Useful for transitioning to/from separate menus
