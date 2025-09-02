@@ -8,3 +8,4 @@
 - Override the functions in my_menu.gd to create custom transitions.
 - If you override _ready() then call super() in the overidden ready.
 - Subscribe to signals of MenuManager to know when your custom transitions are done.
+- Call MenuManager.clear() when switching scenes

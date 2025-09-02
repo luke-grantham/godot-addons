@@ -6,7 +6,7 @@ signal activate_finished()
 signal deactivate_started()
 signal deactivate_finished()
 
-@export var menu_type: MenuManager.MenuGroup
+@export var menu_group: MenuManager.MenuGroup
 
 func _ready() -> void:
     MenuManager.register(self)
