@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd5yq5tvp8bwc"]
 
 [ext_resource type="PackedScene" uid="uid://dg2ra8kauhj1m" path="res://addons/VolumeControl/VolumeControl.tscn" id="1_65qq1"]
-[ext_resource type="AudioStream" uid="uid://bdlvmuwesdtu6" path="res://Demo/VolumeControlDemo/zapsplat_multimedia_ui_bell_chime_notification_simple_bright_nudge_alert_ping_descending_fast_89999.mp3" id="1_781fu"]
 [ext_resource type="AudioStream" uid="uid://d4gvtjm6h471" path="res://Demo/VolumeControlDemo/dark_harmonics_taiko_fury_05_crimson_blossom.mp3" id="1_dm2sm"]
+[ext_resource type="Script" uid="uid://ci78e1u7gd01c" path="res://Demo/VolumeControlDemo/reload_scene_button.gd" id="4_abwk7"]
 
 [node name="VolumeControlDemo" type="Node2D"]
 
@@ -30,10 +30,8 @@ layout_mode = 2
 audio_bus = 2
 labelText = "SFX"
 
-[node name="Label" parent="CanvasLayer/VBoxContainer/VolumeControl3" index="0"]
-text = "SFX"
-
-[node name="SfxTest" parent="CanvasLayer/VBoxContainer/VolumeControl3" index="4"]
-stream = ExtResource("1_781fu")
-
-[editable path="CanvasLayer/VBoxContainer/VolumeControl3"]
+[node name="ReloadSceneButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "reload scene
+"
+script = ExtResource("4_abwk7")

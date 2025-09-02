@@ -1,10 +1,7 @@
 ﻿### Volume Control
-You should have 3 audio buses in your project in this order:
-1. Master
-2. Music
-3. Sfx
-
-The names don't really matter just the order.
+- Must be used with AudioManager
+- Add the AudioManager in /addons/audio_manager as an autoload.
+- The AudioManager keeps a copy of the VolumeData resource so that your volume settings are consistent across scenes
 
 ---
 ### Credits

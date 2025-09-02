@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://q7r2emn05npg"]
+
+[ext_resource type="Script" uid="uid://dwl33xigjne76" path="res://addons/audio_manager/audio_manager.gd" id="1_xcl0y"]
+[ext_resource type="Resource" uid="uid://vd5q54wsyoqk" path="res://Demo/VolumeControlDemo/VolumeData.tres" id="2_spqo3"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_xcl0y")
+volume_data = ExtResource("2_spqo3")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="VolumeData" load_steps=2 format=3 uid="uid://vd5q54wsyoqk"]
+
+[ext_resource type="Script" uid="uid://coqo8trdi065k" path="res://addons/VolumeControl/VolumeData.gd" id="1_pof2i"]
+
+[resource]
+script = ExtResource("1_pof2i")
+music_volume_slider_setting = 0.0
+sfx_volume_slider_setting = 0.2
+master_volume_slider_setting = 0.5
