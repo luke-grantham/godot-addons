@@ -1,4 +1,4 @@
-extends MyMenu
+extends MenuEffect
 
 func _ready() -> void:
     super()

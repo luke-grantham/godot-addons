@@ -7,3 +7,8 @@ static func enum_name(enum_dict: Dictionary, value: int) -> String:
         if enum_dict[name] == value:
             return name
     return "Unknown"
+
+static func reset_tween(n: Node, t: Tween) -> Tween:
+    if t:
+        t.stop()
+    return n.create_tween()

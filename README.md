@@ -26,4 +26,4 @@ Interpolate float values over time
 Some helpful static functions 
 
 ### Menu Manager
-Manage the visibility of groups of Control nodes. Useful for transitioning to/from separate menus
+Manage groups of Control nodes. Useful for transitioning to/from separate menus or animating ui in and out of view

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://25vjr2qfu71y"]
+
+[ext_resource type="Script" uid="uid://bu4h4dnvxv7qc" path="res://addons/menu_manager/menu_effect/impl/InstantMenuEffect/instant_menu_effect.gd" id="1_salv2"]
+
+[node name="InstantMenuEffect" type="Node"]
+script = ExtResource("1_salv2")

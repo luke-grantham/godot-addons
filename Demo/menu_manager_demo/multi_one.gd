@@ -1,1 +1,1 @@
-extends MyMenu
+extends MenuEffect

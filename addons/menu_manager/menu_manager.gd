@@ -33,6 +33,7 @@ func _bubble_df(menu_group: MenuGroup):
 ## Register a menu so the MenuManager can start managing that menu
 func register(menu):
     if menu.get("menu_group") != null:
+        print("MenuManager ::: Registering %s on %s" % [menu.name, menu.parent.name])
         _menu_dict[menu.menu_group].append(menu)
         menu.activate_started.connect(_bubble_as.bind(menu.menu_group))
         menu.activate_finished.connect(_bubble_af.bind(menu.menu_group))
@@ -66,5 +67,6 @@ func _init_menu_dict():
 
 ## Clear registered menus from the MenuManager, call when switching scenes
 func clear():
+    print("MenuManager ::: Clearing")
     _menu_dict.clear()
     _init_menu_dict()

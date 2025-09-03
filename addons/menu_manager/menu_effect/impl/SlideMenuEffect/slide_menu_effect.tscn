@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d332q3c0s54qo"]
+
+[ext_resource type="Script" uid="uid://dh4g00usxs2k1" path="res://addons/menu_manager/menu_effect/impl/SlideMenuEffect/slide_menu_effect.gd" id="1_8x0tw"]
+
+[node name="SlideMenuEffect" type="Node"]
+script = ExtResource("1_8x0tw")
