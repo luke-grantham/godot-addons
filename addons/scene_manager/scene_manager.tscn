@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7erjc1mwdi1m"]
+[gd_scene load_steps=7 format=3 uid="uid://c7erjc1mwdi1m"]
 
 [ext_resource type="Script" uid="uid://w58eptyxrkvp" path="res://addons/scene_manager/scene_manager.gd" id="1_1etm4"]
 [ext_resource type="Script" uid="uid://dsg1vki1ir8lt" path="res://addons/scene_manager/scene_data.gd" id="2_3ovtl"]
 [ext_resource type="PackedScene" uid="uid://xni3n0246vs" path="res://Demo/scene_manager_demo/main_menu_scene.tscn" id="3_i01ae"]
-[ext_resource type="Script" uid="uid://bfyk3ha7vmh01" path="res://addons/scene_manager/transition_behavior/transition_behavior.gd" id="4_va0f6"]
 [ext_resource type="PackedScene" uid="uid://bahf2jq3vcqkm" path="res://Demo/scene_manager_demo/game_scene.tscn" id="5_0pf8l"]
 
 [sub_resource type="Resource" id="Resource_t03os"]
@@ -12,7 +11,6 @@ scene = ExtResource("3_i01ae")
 scene_id = 0
 entering_transition_name = "IrisWipe"
 exiting_transition_name = "IrisWipe"
-transition_behavior = ExtResource("4_va0f6")
 metadata/_custom_type_script = "uid://dsg1vki1ir8lt"
 
 [sub_resource type="Resource" id="Resource_fi703"]
@@ -21,7 +19,6 @@ scene = ExtResource("5_0pf8l")
 scene_id = 1
 entering_transition_name = ""
 exiting_transition_name = ""
-transition_behavior = ExtResource("4_va0f6")
 metadata/_custom_type_script = "uid://dsg1vki1ir8lt"
 
 [node name="SceneManager" type="Node"]
