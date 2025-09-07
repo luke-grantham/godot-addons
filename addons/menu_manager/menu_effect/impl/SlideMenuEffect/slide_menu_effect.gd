@@ -27,6 +27,7 @@ func _ready() -> void:
     super()
     initial_position = parent.global_position
 
+
     match slide_out_direction:
         SlideOutDirection.Right:
             off_screen_position = Vector2(
@@ -42,6 +43,11 @@ func _ready() -> void:
                 initial_position.x,
                 initial_position.y + (get_viewport().get_visible_rect().size.y-initial_position.y),
             )
+
+    if parent.visible:
+        set_active()
+    else:
+        set_inactive()
 
 
 func activate():
@@ -69,3 +75,10 @@ func deactivate():
             parent.hide()
             deactivate_finished.emit()
     )
+
+func set_active():
+    parent.global_position = initial_position
+
+
+func set_inactive():
+    parent.global_position = off_screen_position

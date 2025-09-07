@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://p0oag158j0on"]
+[gd_scene load_steps=5 format=3 uid="uid://p0oag158j0on"]
 
 [ext_resource type="Script" uid="uid://rpjl14md6imb" path="res://Demo/menu_manager_demo/menu_manager_demo.gd" id="1_7pqnx"]
 [ext_resource type="PackedScene" uid="uid://25vjr2qfu71y" path="res://addons/menu_manager/menu_effect/impl/InstantMenuEffect/instant_menu_effect.tscn" id="2_uxiku"]
 [ext_resource type="PackedScene" uid="uid://d332q3c0s54qo" path="res://addons/menu_manager/menu_effect/impl/SlideMenuEffect/slide_menu_effect.tscn" id="3_7pqnx"]
+[ext_resource type="PackedScene" uid="uid://p7lda5vi3qf7" path="res://addons/menu_manager/menu_effect/impl/grow_menu_effect/grow_menu_effect.tscn" id="4_dcw2f"]
 
 [node name="MenuManagerDemo" type="Node2D"]
 script = ExtResource("1_7pqnx")
@@ -55,6 +56,7 @@ slide_out_direction = 3
 menu_group = 2
 
 [node name="MultiTwo" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -72,11 +74,32 @@ text = "multi 2
 slide_out_direction = 3
 menu_group = 2
 
+[node name="Credits2" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -162.0
+offset_top = 297.0
+offset_right = 169.0
+offset_bottom = 473.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Credits2"]
+layout_mode = 2
+text = "Credits 2"
+
+[node name="GrowMenuEffect" parent="CanvasLayer/Credits2" instance=ExtResource("4_dcw2f")]
+activation_time = 0.5
+grow_trans = 11
+shrink_trans = 5
+menu_group = 1
+
 [node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 538.0
-offset_top = 257.0
-offset_right = 745.0
-offset_bottom = 568.0
+offset_left = 802.0
+offset_top = 326.0
+offset_right = 1009.0
+offset_bottom = 637.0
 
 [node name="ShowSettings" type="Button" parent="CanvasLayer/ButtonContainer"]
 layout_mode = 2

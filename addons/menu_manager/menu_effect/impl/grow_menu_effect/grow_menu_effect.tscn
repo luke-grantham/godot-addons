@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://p7lda5vi3qf7"]
+
+[ext_resource type="Script" uid="uid://c4ny8q02oiyk7" path="res://addons/menu_manager/menu_effect/impl/grow_menu_effect/grow_menu_effect.gd" id="1_vfci4"]
+
+[node name="GrowMenuEffect" type="Node"]
+script = ExtResource("1_vfci4")

@@ -18,12 +18,22 @@ func _ready() -> void:
     MenuManager.register(self)
     # if you override _ready call super() in the overridden _ready function
 
+## Show the menu
 func activate():
     activate_started.emit()
     parent.show()
     activate_finished.emit()
 
+## Hide the menu
 func deactivate():
     deactivate_started.emit()
     parent.hide()
     deactivate_finished.emit()
+
+## Used to help set the initial state
+func set_active():
+    pass
+
+## Used to help set the initial state
+func set_inactive():
+    pass
