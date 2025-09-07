@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://druchkkfdwy6t" path="res://Demo/scene_manager_demo/main_menu_scene.gd" id="1_kjc81"]
 [ext_resource type="Theme" uid="uid://dogd8u8ri1hh6" path="res://addons/theme/testing_theme.tres" id="2_adimm"]
-[ext_resource type="PackedScene" uid="uid://bi2fqo0bb0ixe" path="res://addons/ControlWiggleComponent/ControlWiggleComponent.tscn" id="3_tek7n"]
+[ext_resource type="PackedScene" uid="uid://doja4h18vkj2b" path="res://addons/reactive_button_component/reactive_button_component.tscn" id="3_tek7n"]
 
 [node name="MainMenuScene" type="Node2D"]
 script = ExtResource("1_kjc81")
@@ -31,9 +31,6 @@ theme = ExtResource("2_adimm")
 theme_type_variation = &"black_and_white_button"
 text = "switch scenes"
 
-[node name="ControlWiggleComponent" parent="Button" instance=ExtResource("3_tek7n")]
-should_shake = false
-scale_up_duration = 0.2
-shrink_duration = 0.2
-scale_up_size = Vector2(1.1, 1.1)
-wiggle_on_focus = false
+[node name="ReactiveButtonComponent" parent="Button" instance=ExtResource("3_tek7n")]
+scale_up_size = Vector2(1.2, 1.2)
+pressed_scale = Vector2(0.8, 0.8)

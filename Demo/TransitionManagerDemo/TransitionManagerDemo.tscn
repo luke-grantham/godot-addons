@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://x4fyk72s5jpc"]
+[gd_scene load_steps=5 format=3 uid="uid://x4fyk72s5jpc"]
 
 [ext_resource type="Script" uid="uid://b0cws2a8v70kt" path="res://Demo/TransitionManagerDemo/panel.gd" id="1_aq2ld"]
 [ext_resource type="PackedScene" uid="uid://bi2fqo0bb0ixe" path="res://addons/ControlWiggleComponent/ControlWiggleComponent.tscn" id="2_dm5du"]
+[ext_resource type="Theme" uid="uid://dogd8u8ri1hh6" path="res://addons/theme/testing_theme.tres" id="3_4dvqe"]
+[ext_resource type="PackedScene" uid="uid://doja4h18vkj2b" path="res://addons/reactive_button_component/reactive_button_component.tscn" id="4_gl01p"]
 
 [node name="Test" type="Node2D"]
 
@@ -9,10 +11,10 @@
 layer = 12
 
 [node name="AnimationPlayerTransition" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 322.0
-offset_top = 204.0
-offset_right = 888.0
-offset_bottom = 367.0
+offset_left = 314.0
+offset_top = 325.0
+offset_right = 880.0
+offset_bottom = 488.0
 script = ExtResource("1_aq2ld")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/AnimationPlayerTransition"]
@@ -45,6 +47,7 @@ layout_mode = 2
 text = "Set Game"
 
 [node name="ControlWiggleComponent" parent="CanvasLayer/AnimationPlayerTransition/VBoxContainer/SetGame" instance=ExtResource("2_dm5du")]
+scale_up_size = Vector2(1.05, 1.05)
 
 [node name="TweenedTransition" type="PanelContainer" parent="CanvasLayer"]
 offset_left = 329.0
@@ -56,31 +59,48 @@ animation_to_play = "FadeToBlack"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TweenedTransition"]
 layout_mode = 2
+theme_override_constants/separation = 7
 
 [node name="Label" type="Label" parent="CanvasLayer/TweenedTransition/VBoxContainer"]
 layout_mode = 2
 text = "Tween Based Transition (fade_to_black.tcsn)w (tweened_transition.gd)"
 
 [node name="ToBlack" type="Button" parent="CanvasLayer/TweenedTransition/VBoxContainer"]
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_4dvqe")
+theme_type_variation = &"black_and_white_button"
 text = "To Black"
 
-[node name="ControlWiggleComponent" parent="CanvasLayer/TweenedTransition/VBoxContainer/ToBlack" instance=ExtResource("2_dm5du")]
+[node name="ReactiveButtonComponent3" parent="CanvasLayer/TweenedTransition/VBoxContainer/ToBlack" instance=ExtResource("4_gl01p")]
 
 [node name="ToGame" type="Button" parent="CanvasLayer/TweenedTransition/VBoxContainer"]
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_4dvqe")
+theme_type_variation = &"black_and_white_button"
 text = "To Game"
 
-[node name="ControlWiggleComponent" parent="CanvasLayer/TweenedTransition/VBoxContainer/ToGame" instance=ExtResource("2_dm5du")]
+[node name="ReactiveButtonComponent2" parent="CanvasLayer/TweenedTransition/VBoxContainer/ToGame" instance=ExtResource("4_gl01p")]
 
 [node name="SetBlack" type="Button" parent="CanvasLayer/TweenedTransition/VBoxContainer"]
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_4dvqe")
+theme_type_variation = &"black_and_white_button"
 text = "Set Black"
 
-[node name="ControlWiggleComponent" parent="CanvasLayer/TweenedTransition/VBoxContainer/SetBlack" instance=ExtResource("2_dm5du")]
+[node name="ReactiveButtonComponent3" parent="CanvasLayer/TweenedTransition/VBoxContainer/SetBlack" instance=ExtResource("4_gl01p")]
 
 [node name="SetGame" type="Button" parent="CanvasLayer/TweenedTransition/VBoxContainer"]
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_4dvqe")
+theme_type_variation = &"black_and_white_button"
 text = "Set Game"
 
-[node name="ControlWiggleComponent" parent="CanvasLayer/TweenedTransition/VBoxContainer/SetGame" instance=ExtResource("2_dm5du")]
+[node name="ReactiveButtonComponent" parent="CanvasLayer/TweenedTransition/VBoxContainer/SetGame" instance=ExtResource("4_gl01p")]

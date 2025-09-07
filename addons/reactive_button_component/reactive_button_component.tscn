@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://doja4h18vkj2b"]
+
+[ext_resource type="Script" uid="uid://c0qpkhacvouvi" path="res://addons/reactive_button_component/reactive_button_component.gd" id="1_pbiri"]
+[ext_resource type="AudioStream" uid="uid://qq26g07tnccu" path="res://addons/reactive_button_component/496760__malle99__click-tick-2.wav" id="2_ewy6t"]
+[ext_resource type="AudioStream" uid="uid://bpo1ov02ojwj4" path="res://addons/reactive_button_component/506545__lilmati__pop-02.wav" id="3_5lpit"]
+
+[node name="ReactiveButtonComponent" type="Node"]
+script = ExtResource("1_pbiri")
+
+[node name="HoverSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ewy6t")
+
+[node name="PressedSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5lpit")
