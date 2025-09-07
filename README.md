@@ -29,6 +29,8 @@ Some helpful static functions
 Manage groups of Control nodes. Useful for transitioning to/from separate menus or animating ui in and out of view
 
 ### SceneManager
-Switch scenes with a single line of code using shader-based transitions
+Switch scenes with a single line of code using shader-based transitions.
 
 `SceneManager.load_scene(MyScenes.SceneId.MainMenu)`
+
+Requires: TransitionManager, MyUtil

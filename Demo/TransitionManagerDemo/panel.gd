@@ -1,12 +1,9 @@
 extends PanelContainer
 
+@export var animation_to_play: String = "IrisWipe"
 
 func _ready() -> void:
-    TransitionManager.transition_done.connect(on_transition_done)
-    %ToBlack.pressed.connect(func(): TransitionManager.to_black("IrisWipe"))
-    %ToGame.pressed.connect(func(): TransitionManager.to_game("IrisWipe"))
-    %SetBlack.pressed.connect(func(): TransitionManager.set_black("IrisWipe"))
-    %SetGame.pressed.connect(func(): TransitionManager.set_game("IrisWipe"))
-
-func on_transition_done(transition_name, animation_name):
-    print("Transition %s , Animation %s DONE" % [transition_name, animation_name])
+    $VBoxContainer/ToBlack.pressed.connect(func(): TransitionManager.to_black(animation_to_play))
+    $VBoxContainer/ToGame.pressed.connect(func(): TransitionManager.to_game(animation_to_play))
+    $VBoxContainer/SetBlack.pressed.connect(func(): TransitionManager.set_black(animation_to_play))
+    $VBoxContainer/SetGame.pressed.connect(func(): TransitionManager.set_game(animation_to_play))

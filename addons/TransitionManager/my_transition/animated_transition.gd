@@ -1,10 +1,5 @@
-class_name MyTransition
-extends CanvasItem
-
-signal transition_done(transition_name: String, anim_name: String)
-
-var to_black_animation: StringName = StringName("to_black")
-var to_game_animation: StringName  = StringName("to_game")
+class_name AnimatedTransition
+extends MyTransition
 
 func _ready() -> void:
     check_setup()
