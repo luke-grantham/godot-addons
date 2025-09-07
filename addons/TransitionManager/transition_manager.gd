@@ -11,7 +11,7 @@ func _ready() -> void:
                 func(t_name, a_name):
                     transition_done.emit(t_name, a_name)
                     if should_print_done_messages:
-                        print("TransitionManager ::: %s.%s done" % [t_name, a_name])
+                        print("TransitionManager ::: Done :: %s.%s" % [t_name, a_name])
             )
 
 func to_black(transition_name: NodePath):

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4oh35sgrcoa" path="res://addons/TransitionManager/transition_manager.gd" id="1_gp84o"]
 [ext_resource type="PackedScene" uid="uid://cb88mka5mbxkk" path="res://addons/TransitionManager/transitions/IrisWipe/IrisWipe.tscn" id="2_oo8h1"]
-[ext_resource type="PackedScene" uid="uid://bjjrd758xtyx3" path="res://addons/TransitionManager/transitions/FadeToBlack/FadeToBlack.tscn" id="3_71y6d"]
+[ext_resource type="PackedScene" uid="uid://bjjrd758xtyx3" path="res://addons/TransitionManager/transitions/fade_to_black/fade_to_black.tscn" id="3_71y6d"]
 
 [node name="TransitionManager" type="CanvasLayer"]
 layer = 10
