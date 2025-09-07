@@ -5,4 +5,4 @@ Add this component as a child of a Button.
 - Shrinks on button_down
 - Makes noise when pressed
 
-See demo in `Demo/TransitionManagerDamo`
+See demo in `Demo/TransitionManagerDemo`

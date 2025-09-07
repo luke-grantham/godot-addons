@@ -19,6 +19,9 @@ For showing credits. Saves some time setting up all the control nodes.
 ### ControlWiggleComponent
 Add this to a Control node to make it wiggle when you mouse over it.
 
+### ReactiveButtonComponent
+Add this to a Button to make it change size on hover and press
+
 ### Interpolation Controllers
 Interpolate float values over time
 
