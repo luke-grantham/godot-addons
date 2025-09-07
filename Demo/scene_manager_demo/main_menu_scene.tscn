@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://xni3n0246vs"]
+[gd_scene load_steps=4 format=3 uid="uid://xni3n0246vs"]
 
 [ext_resource type="Script" uid="uid://druchkkfdwy6t" path="res://Demo/scene_manager_demo/main_menu_scene.gd" id="1_kjc81"]
+[ext_resource type="Theme" uid="uid://dogd8u8ri1hh6" path="res://addons/theme/testing_theme.tres" id="2_adimm"]
+[ext_resource type="PackedScene" uid="uid://bi2fqo0bb0ixe" path="res://addons/ControlWiggleComponent/ControlWiggleComponent.tscn" id="3_tek7n"]
 
 [node name="MainMenuScene" type="Node2D"]
 script = ExtResource("1_kjc81")
@@ -13,8 +15,25 @@ offset_bottom = 143.0
 text = "Main Menu"
 
 [node name="Button" type="Button" parent="."]
-offset_left = 557.0
-offset_top = 197.0
-offset_right = 565.0
-offset_bottom = 205.0
+custom_minimum_size = Vector2(150, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 522.0
+offset_top = 231.0
+offset_right = 672.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_adimm")
+theme_type_variation = &"black_and_white_button"
 text = "switch scenes"
+
+[node name="ControlWiggleComponent" parent="Button" instance=ExtResource("3_tek7n")]
+should_shake = false
+scale_up_duration = 0.2
+shrink_duration = 0.2
+scale_up_size = Vector2(1.1, 1.1)
+wiggle_on_focus = false
