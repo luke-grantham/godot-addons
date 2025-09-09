@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd5yq5tvp8bwc"]
+[gd_scene load_steps=6 format=3 uid="uid://dd5yq5tvp8bwc"]
 
 [ext_resource type="PackedScene" uid="uid://dg2ra8kauhj1m" path="res://addons/VolumeControl/VolumeControl.tscn" id="1_65qq1"]
 [ext_resource type="AudioStream" uid="uid://d4gvtjm6h471" path="res://Demo/VolumeControlDemo/dark_harmonics_taiko_fury_05_crimson_blossom.mp3" id="1_dm2sm"]
 [ext_resource type="Script" uid="uid://ci78e1u7gd01c" path="res://Demo/VolumeControlDemo/reload_scene_button.gd" id="4_abwk7"]
+[ext_resource type="PackedScene" uid="uid://0w3a7f6ac00v" path="res://addons/volume_control_v2/volume_control_v2.tscn" id="4_ctm3r"]
+[ext_resource type="AudioStream" uid="uid://cjkjj76q7kl6v" path="res://addons/volume_control_v2/506546__lilmati__pop-01.wav" id="5_ctm3r"]
 
 [node name="VolumeControlDemo" type="Node2D"]
 
@@ -31,6 +33,30 @@ audio_bus = 2
 labelText = "SFX"
 
 [node name="ReloadSceneButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "reload scene
+"
+script = ExtResource("4_abwk7")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 587.0
+offset_top = 156.0
+offset_right = 879.0
+offset_bottom = 292.0
+
+[node name="VolumeControlV2" parent="CanvasLayer/VBoxContainer2" instance=ExtResource("4_ctm3r")]
+layout_mode = 2
+
+[node name="VolumeControlV3" parent="CanvasLayer/VBoxContainer2" instance=ExtResource("4_ctm3r")]
+layout_mode = 2
+audio_bus = 1
+
+[node name="VolumeControlV4" parent="CanvasLayer/VBoxContainer2" instance=ExtResource("4_ctm3r")]
+layout_mode = 2
+audio_bus = 2
+sfx_test_sound = ExtResource("5_ctm3r")
+
+[node name="ReloadSceneButton" type="Button" parent="CanvasLayer/VBoxContainer2"]
 layout_mode = 2
 text = "reload scene
 "

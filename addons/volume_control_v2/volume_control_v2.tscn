@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://0w3a7f6ac00v"]
+
+[ext_resource type="Script" uid="uid://yestkbwhau30" path="res://addons/volume_control_v2/volume_control_v_2.gd" id="1_legbo"]
+
+[node name="VolumeControlV2" type="GridContainer"]
+columns = 2
+script = ExtResource("1_legbo")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "Master"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="SfxTest" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"
