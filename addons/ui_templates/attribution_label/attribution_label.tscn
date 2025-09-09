@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxekrvk7uy6i2"]
+
+[ext_resource type="Script" uid="uid://cmg71gyvyhkh" path="res://addons/ui_templates/attribution_label/attribution_label.gd" id="1_as4j2"]
+[ext_resource type="Script" uid="uid://ds5ym3dpjcrap" path="res://addons/ui_templates/attribution_label/attribution_data.gd" id="2_6f0df"]
+
+[sub_resource type="Resource" id="Resource_b5iit"]
+script = ExtResource("2_6f0df")
+title = "WowSound"
+author = "name"
+source_link = "http://www.google.com"
+licence = "Creative Commons 0"
+metadata/_custom_type_script = "uid://ds5ym3dpjcrap"
+
+[node name="AttributionLabel" type="RichTextLabel"]
+offset_right = 1.0
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("1_as4j2")
+attribution_data = SubResource("Resource_b5iit")

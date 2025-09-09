@@ -37,3 +37,7 @@ Switch scenes with a single line of code using shader-based transitions.
 `SceneManager.load_scene(MyScenes.SceneId.MainMenu)`
 
 Requires: TransitionManager, MyUtil
+
+
+### UI Templates
+Templates for various ui elements commonly needed. Start buttons, credits, settings, etc.
