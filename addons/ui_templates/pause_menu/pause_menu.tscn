@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce3ppxibbhibc"]
+
+[ext_resource type="Texture2D" uid="uid://bl5gamqv3qmwe" path="res://addons/ui_templates/icons/forward.png" id="1_cffte"]
+[ext_resource type="Script" uid="uid://n2qclu4o60rd" path="res://addons/ui_templates/pause_menu/pause_menu.gd" id="1_k6gh7"]
+[ext_resource type="Texture2D" uid="uid://bi3o8jdomk780" path="res://addons/ui_templates/icons/gear.png" id="2_k6gh7"]
+
+[node name="PauseMenu" type="PanelContainer"]
+process_mode = 3
+offset_right = 330.0
+offset_bottom = 261.0
+script = ExtResource("1_k6gh7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 60
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TitleMargin"]
+layout_mode = 2
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+text = "Resume
+"
+icon = ExtResource("1_cffte")
+alignment = 0
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+text = "Settings"
+icon = ExtResource("2_k6gh7")
+alignment = 0
+expand_icon = true
