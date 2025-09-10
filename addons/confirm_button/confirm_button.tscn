@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpuu07x4ypun7"]
+
+[ext_resource type="Script" uid="uid://b4mlxbkb3f75t" path="res://addons/confirm_button/confirm_button.gd" id="1_mithj"]
+
+[node name="ConfirmButton" type="Button"]
+text = "do the thing"
+script = ExtResource("1_mithj")

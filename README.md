@@ -41,3 +41,7 @@ Requires: TransitionManager, MyUtil
 
 ### UI Templates
 Templates for various ui elements commonly needed. Start buttons, credits, settings, etc.
+
+
+### ConfirmButton
+Button that asks for confirmation on pressed.
