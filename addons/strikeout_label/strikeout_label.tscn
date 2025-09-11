@@ -1,0 +1,147 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8qeq02is6uv6"]
+
+[ext_resource type="Script" uid="uid://cqregbbgqjke3" path="res://addons/strikeout_label/strikeout_label.gd" id="1_pcdvw"]
+[ext_resource type="Texture2D" uid="uid://dqyyo72r1bsum" path="res://addons/strikeout_label/empty_checkbox.png" id="2_nolau"]
+[ext_resource type="Texture2D" uid="uid://v7iut3qm5in3" path="res://addons/strikeout_label/green_checkmark.png" id="3_5i81n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xye7n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ietr0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvalh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l5nq"]
+bg_color = Color(0.184314, 0.721569, 0, 0.886275)
+
+[sub_resource type="Animation" id="Animation_taegn"]
+resource_name = "strikeout"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/HBoxContainer/PanelContainer/ProgressBar:value")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/HBoxContainer/TextureRect/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/HBoxContainer/TextureRect/Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.137255), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fxmjc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/HBoxContainer/PanelContainer/ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [18.9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/HBoxContainer/TextureRect/Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/HBoxContainer/TextureRect/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_00lij"]
+_data = {
+&"RESET": SubResource("Animation_fxmjc"),
+&"strikeout": SubResource("Animation_taegn")
+}
+
+[node name="StrikeoutLabel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pcdvw")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xye7n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_nolau")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer/HBoxContainer/TextureRect"]
+position = Vector2(21, 17)
+texture = ExtResource("3_5i81n")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ietr0")
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Accomplish the task!"
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/HBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxEmpty_cvalh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0l5nq")
+value = 18.9
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_00lij")
+}
