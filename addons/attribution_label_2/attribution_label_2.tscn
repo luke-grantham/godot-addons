@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddks3jxoiwavs"]
+
+[ext_resource type="Script" uid="uid://dhonlnir47gw0" path="res://addons/attribution_label_2/attribution_label_2.gd" id="1_vohl8"]
+[ext_resource type="Script" uid="uid://ds5ym3dpjcrap" path="res://addons/ui_templates/attribution_label/attribution_data.gd" id="2_rpfk8"]
+[ext_resource type="Script" uid="uid://b1tnfandbnth7" path="res://addons/attribution_label_2/attribution_label_data.gd" id="3_rpfk8"]
+
+[sub_resource type="Resource" id="Resource_sg25w"]
+script = ExtResource("2_rpfk8")
+title = "WowSound"
+author = "TheName"
+source_link = "http://www.google.com"
+licence = "MIT"
+metadata/_custom_type_script = "uid://ds5ym3dpjcrap"
+
+[sub_resource type="Resource" id="Resource_6ctyh"]
+script = ExtResource("3_rpfk8")
+font_size = 12
+metadata/_custom_type_script = "uid://b1tnfandbnth7"
+
+[node name="AttributionLabel2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vohl8")
+attribution_data = SubResource("Resource_sg25w")
+attribution_label_data = SubResource("Resource_6ctyh")
+
+[node name="Content" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 23.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.19382, 0.761516, 0.820703, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.239216, 0.6, 1)
+theme_override_font_sizes/font_size = 12
+text = "Source"
+uri = "http://www.google.com"
+
+[node name="LicenseName" type="Label" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = " -  MIT"
