@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgmff38wphmk0"]
+[gd_scene load_steps=5 format=3 uid="uid://cgmff38wphmk0"]
 
 [ext_resource type="Script" uid="uid://b4oh35sgrcoa" path="res://addons/TransitionManager/transition_manager.gd" id="1_gp84o"]
 [ext_resource type="PackedScene" uid="uid://cb88mka5mbxkk" path="res://addons/TransitionManager/transitions/IrisWipe/IrisWipe.tscn" id="2_oo8h1"]
 [ext_resource type="PackedScene" uid="uid://bjjrd758xtyx3" path="res://addons/TransitionManager/transitions/fade_to_black/fade_to_black.tscn" id="3_71y6d"]
+[ext_resource type="PackedScene" uid="uid://c8ark2wpq5rbb" path="res://addons/TransitionManager/transitions/shutter/shutter.tscn" id="5_ipjvk"]
 
 [node name="TransitionManager" type="CanvasLayer"]
 layer = 10
@@ -14,3 +15,5 @@ script = ExtResource("1_gp84o")
 to_black_duration = 2.0
 to_black_trans = 10
 to_game_duration = 2.0
+
+[node name="Shutter" parent="." instance=ExtResource("5_ipjvk")]

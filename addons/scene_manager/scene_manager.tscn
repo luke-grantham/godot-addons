@@ -8,7 +8,6 @@
 [sub_resource type="Resource" id="Resource_t03os"]
 script = ExtResource("2_3ovtl")
 scene = ExtResource("3_i01ae")
-scene_id = 0
 entering_transition_name = "IrisWipe"
 exiting_transition_name = "IrisWipe"
 metadata/_custom_type_script = "uid://dsg1vki1ir8lt"
@@ -17,8 +16,8 @@ metadata/_custom_type_script = "uid://dsg1vki1ir8lt"
 script = ExtResource("2_3ovtl")
 scene = ExtResource("5_0pf8l")
 scene_id = 1
-entering_transition_name = ""
-exiting_transition_name = ""
+entering_transition_name = "Shutter"
+exiting_transition_name = "Shutter"
 metadata/_custom_type_script = "uid://dsg1vki1ir8lt"
 
 [node name="SceneManager" type="Node"]
