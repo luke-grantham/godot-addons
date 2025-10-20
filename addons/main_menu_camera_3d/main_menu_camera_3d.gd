@@ -4,12 +4,12 @@ extends Camera3D
 var initial_x: float
 var initial_y: float
 
-## How far the screen can rotate up and down in degrees
-@export_range(0.0, 25.0, 0.1)
+## How far the screen can rotate up and down
+@export_range(0.0, 15.0, 0.1, "radians_as_degrees")
 var max_pitch: float = 5.0
 
-## How far the screen can rotate left and right in degrees
-@export_range(0.0, 25.0, 0.1)
+## How far the screen can rotate left and right
+@export_range(0.0, 15.0, 0.1, "radians_as_degrees")
 var max_yaw: float = 5.0
 
 func _ready() -> void:
@@ -27,5 +27,5 @@ func _process(delta: float) -> void:
 	var centered_x: float = -(normalized_x - 0.5) * 2.0
 	var centered_y: float = -(normalized_y - 0.5) * 2.0
 
-	rotation.y = lerp_angle(rotation.y, initial_y+(centered_x*deg_to_rad(max_yaw)), delta)
-	rotation.x = lerp_angle(rotation.x, initial_x+(centered_y*deg_to_rad(max_pitch)), delta)
+	rotation.y = lerp_angle(rotation.y, initial_y+(centered_x*max_yaw), delta)
+	rotation.x = lerp_angle(rotation.x, initial_x+(centered_y*max_pitch), delta)

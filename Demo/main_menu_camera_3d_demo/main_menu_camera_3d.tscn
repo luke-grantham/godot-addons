@@ -27,6 +27,8 @@ directional_shadow_max_distance = 1.0
 
 [node name="MainMenuCamera3d" parent="." instance=ExtResource("1_1o1kh")]
 transform = Transform3D(0.6508016, -0.41515785, 0.6356896, 0, 0.8372623, 0.5468015, -0.7592479, -0.35585925, 0.54489166, 8.711351, 7.4932485, 7.467076)
+max_pitch = 0.08726646259971647
+max_yaw = 0.08726646259971647
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 size = Vector3(6.795, 1, 9.155)
