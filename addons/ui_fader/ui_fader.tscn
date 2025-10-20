@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6m7ca0cn3tee"]
+
+[ext_resource type="Script" uid="uid://o07y3q3eqp0f" path="res://addons/ui_fader/ui_fader.gd" id="1_7eci1"]
+
+[node name="UiFader" type="Node"]
+script = ExtResource("1_7eci1")

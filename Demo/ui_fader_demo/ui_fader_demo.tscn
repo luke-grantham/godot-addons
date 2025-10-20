@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://db7ud4fkwyfjb"]
+
+[ext_resource type="Script" uid="uid://b6jshcc0frean" path="res://Demo/ui_fader_demo/demo_fade_parent.gd" id="1_fgyxy"]
+[ext_resource type="PackedScene" uid="uid://6m7ca0cn3tee" path="res://addons/ui_fader/ui_fader.tscn" id="2_6rw8x"]
+
+[node name="UiFaderDemo" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DemoFadeParent" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -52.0
+offset_right = 20.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fgyxy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DemoFadeParent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/DemoFadeParent/VBoxContainer"]
+layout_mode = 2
+text = "don't click and i'll fade away"
+
+[node name="UiFader" parent="CanvasLayer/DemoFadeParent" instance=ExtResource("2_6rw8x")]
+value_update_signal = "click_count_updated"

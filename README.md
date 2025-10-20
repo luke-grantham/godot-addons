@@ -51,3 +51,6 @@ Includes CC0 universal transition shader copied here for my convenience: https:/
 
 ### MainMenuCamera3D
 Camera for 3D menus that slightly rotates the camera based on your mouse position
+
+### UI Fader
+Automatically fade out UI elements when they aren't being used.
