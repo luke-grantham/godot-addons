@@ -48,3 +48,6 @@ Button that asks for confirmation on pressed.
 
 ### Shaders
 Includes CC0 universal transition shader copied here for my convenience: https://github.com/cashew-olddew/Universal-Transition-Shader
+
+### MainMenuCamera3D
+Camera for 3D menus that slightly rotates the camera based on your mouse position

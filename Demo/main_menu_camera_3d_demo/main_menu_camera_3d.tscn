@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://nosgs7c1n3ec"]
+
+[ext_resource type="PackedScene" uid="uid://r04m8extgqkj" path="res://addons/main_menu_camera_3d/main_menu_camera_3d.tscn" id="1_1o1kh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1o1kh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_r7hkx"]
+sky_material = SubResource("ProceduralSkyMaterial_1o1kh")
+
+[sub_resource type="Environment" id="Environment_yxeqv"]
+background_mode = 2
+sky = SubResource("Sky_r7hkx")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="MainMenuCamera3d" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yxeqv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="MainMenuCamera3d" parent="." instance=ExtResource("1_1o1kh")]
+transform = Transform3D(0.6508016, -0.41515785, 0.6356896, 0, 0.8372623, 0.5468015, -0.7592479, -0.35585925, 0.54489166, 8.711351, 7.4932485, 7.467076)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(6.795, 1, 9.155)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.002356213, 0.9999972, 0, -0.9999972, -0.002356213, 0, 0, 0, 1, 0, -1.9264188, 0)
+size = Vector3(6.795, 1, 9.155)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.002356213, 0.9999972, 0, -0.9999972, -0.002356213, 0, 0, 0, 1, 2.454642, 3.318438, 0)
+size = Vector3(6.795, 1, 0.925)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.002356213, 0.9999972, 0, -0.9999972, -0.002356213, 0, 0, 0, 1, -2.6947148, 0.5411029, 0)
+size = Vector3(6.795, 1, 0.925)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.002356213, 0.9999972, 0, -0.9999972, -0.002356213, 0, 0, 0, 1, 1.0904112, 0.5411029, 2.5571022)
+size = Vector3(6.795, 1, 0.925)
