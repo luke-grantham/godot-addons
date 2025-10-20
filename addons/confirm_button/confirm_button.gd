@@ -5,9 +5,9 @@ extends Button
 signal confirmed()
 
 enum State {
-    Initial,
-    Pressed,
-    Confirmed
+	Initial,
+	Pressed,
+	Confirmed
 }
 
 var state: State = State.Initial
@@ -18,19 +18,19 @@ var state: State = State.Initial
 
 
 func _ready() -> void:
-    text = initial_text
-    pressed.connect(on_pressed)
+	text = initial_text
+	pressed.connect(on_pressed)
 
 
 func on_pressed():
-    match state:
-        State.Initial:
-            text = pressed_text
-            state = State.Pressed
-        State.Pressed:
-            text = confirmed_text
-            state = State.Confirmed
-        State.Confirmed:
-            text = initial_text
-            state = State.Initial
-            confirmed.emit()
+	match state:
+		State.Initial:
+			text = pressed_text
+			state = State.Pressed
+		State.Pressed:
+			text = confirmed_text
+			state = State.Confirmed
+		State.Confirmed:
+			text = initial_text
+			state = State.Initial
+			confirmed.emit()

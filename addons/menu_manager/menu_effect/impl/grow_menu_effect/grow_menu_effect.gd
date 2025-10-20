@@ -9,46 +9,46 @@ var tween: Tween
 @export var shrink_ease: Tween.EaseType = Tween.EASE_OUT
 
 func _ready() -> void:
-    super()
-    parent.pivot_offset = parent.size/2.0
+	super()
+	parent.pivot_offset = parent.size/2.0
 
-    if parent.visible:
-        set_active()
-    else:
-        set_inactive()
+	if parent.visible:
+		set_active()
+	else:
+		set_inactive()
 
 func activate():
-    activate_started.emit()
-    parent.show()
+	activate_started.emit()
+	parent.show()
 
-    tween = MyUtil.reset_tween(self, tween)
-    tween.set_trans(grow_trans)
-    tween.set_ease(grow_ease)
-    tween.tween_property(parent, "scale", Vector2.ONE, activation_time)
-    tween.finished.connect(
-        func():
-            activate_finished.emit()
-    )
-    activate_finished.emit()
+	tween = MyUtil.reset_tween(self, tween)
+	tween.set_trans(grow_trans)
+	tween.set_ease(grow_ease)
+	tween.tween_property(parent, "scale", Vector2.ONE, activation_time)
+	tween.finished.connect(
+		func():
+			activate_finished.emit()
+	)
+	activate_finished.emit()
 
 func deactivate():
-    deactivate_started.emit()
+	deactivate_started.emit()
 
-    tween = MyUtil.reset_tween(self, tween)
-    tween.set_trans(shrink_trans)
-    tween.set_ease(shrink_ease)
-    tween.tween_property(parent, "scale", Vector2.ZERO, activation_time)
-    tween.finished.connect(
-        func():
-            parent.hide()
-            deactivate_finished.emit()
-    )
+	tween = MyUtil.reset_tween(self, tween)
+	tween.set_trans(shrink_trans)
+	tween.set_ease(shrink_ease)
+	tween.tween_property(parent, "scale", Vector2.ZERO, activation_time)
+	tween.finished.connect(
+		func():
+			parent.hide()
+			deactivate_finished.emit()
+	)
 
 
 func set_active():
-    parent.scale = Vector2.ONE
-    parent.show()
+	parent.scale = Vector2.ONE
+	parent.show()
 
 func set_inactive():
-    parent.scale = Vector2.ZERO
-    parent.hide()
+	parent.scale = Vector2.ZERO
+	parent.hide()

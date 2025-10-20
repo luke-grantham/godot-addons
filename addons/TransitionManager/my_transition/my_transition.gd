@@ -7,20 +7,20 @@ var to_black_animation: StringName = StringName("to_black")
 var to_game_animation: StringName  = StringName("to_game")
 
 func _ready() -> void:
-    pass
+	pass
 
 func to_black():
-    pass
+	pass
 
 func to_game():
-    pass
+	pass
 
 func set_black():
-    pass
+	pass
 
 func set_game():
-    pass
+	pass
 
 
 func check_setup():
-    pass
+	pass
