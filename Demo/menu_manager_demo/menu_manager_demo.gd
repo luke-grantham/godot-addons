@@ -26,3 +26,9 @@ func _ready() -> void:
 			get_tree().reload_current_scene()
 
 	)
+
+	%ReloadSceneButton.pressed.connect(func(): get_tree().reload_current_scene())
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_released("debug"):
+		MenuManager.debug()

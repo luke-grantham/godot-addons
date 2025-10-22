@@ -34,6 +34,7 @@ func _bubble_df(menu_group: MenuGroup):
 func register(menu):
 	if menu.get("menu_group") != null:
 		print("MenuManager ::: Registering %s on %s" % [menu.name, menu.parent.name])
+		menu.tree_exiting.connect(_on_menu_effect_exiting.bind(menu))
 		_menu_dict[menu.menu_group].append(menu)
 		menu.activate_started.connect(_bubble_as.bind(menu.menu_group))
 		menu.activate_finished.connect(_bubble_af.bind(menu.menu_group))
@@ -65,8 +66,11 @@ func _init_menu_dict():
 	for key in range(0, MenuGroup.size()):
 		_menu_dict[key] = []
 
-## Clear registered menus from the MenuManager, call when switching scenes
-func clear():
-	print("MenuManager ::: Clearing")
-	_menu_dict.clear()
-	_init_menu_dict()
+func _on_menu_effect_exiting(menu: MenuEffect):
+	_menu_dict[menu.menu_group].erase(menu)
+
+func debug():
+	print("----- Menu Manager DEBUG -----")
+	for key in _menu_dict:
+		print("%s : %s" % [ str(key), str(_menu_dict[key]) ])
+	print("----------")

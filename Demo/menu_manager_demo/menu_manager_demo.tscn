@@ -10,16 +10,6 @@ script = ExtResource("1_7pqnx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="SettingsMenu" type="PanelContainer" parent="CanvasLayer"]
-offset_right = 314.0
-offset_bottom = 248.0
-
-[node name="Label" type="Label" parent="CanvasLayer/SettingsMenu"]
-layout_mode = 2
-text = "settings"
-
-[node name="InstantMenuEffect" parent="CanvasLayer/SettingsMenu" instance=ExtResource("2_uxiku")]
-
 [node name="CreditsMenu" type="PanelContainer" parent="CanvasLayer"]
 custom_minimum_size = Vector2(100, 200)
 anchors_preset = 11
@@ -38,6 +28,17 @@ text = "Credits"
 slide_out_time = 3.0
 slide_in_time = 0.5
 menu_group = 1
+
+[node name="SettingsMenu" type="PanelContainer" parent="CanvasLayer"]
+offset_right = 314.0
+offset_bottom = 248.0
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsMenu"]
+layout_mode = 2
+text = "settings"
+
+[node name="InstantMenuEffect" parent="CanvasLayer/SettingsMenu" instance=ExtResource("2_uxiku")]
+menu_group = 0
 
 [node name="MultiOne" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 2
@@ -135,4 +136,12 @@ text = "show settings hide others"
 
 [node name="ReloadScene" type="Button" parent="CanvasLayer/ButtonContainer"]
 layout_mode = 2
+text = "Reload Scene"
+
+[node name="ReloadSceneButton" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 557.0
+offset_top = 250.0
+offset_right = 565.0
+offset_bottom = 258.0
 text = "Reload Scene"
