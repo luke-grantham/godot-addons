@@ -6,7 +6,7 @@ signal activate_finished()
 signal deactivate_started()
 signal deactivate_finished()
 
-@export var menu_group: MenuManager.MenuGroup
+@export var menu_group: MenuConstants.MenuGroup
 
 var parent: Control
 

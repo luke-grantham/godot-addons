@@ -38,7 +38,6 @@ layout_mode = 2
 text = "settings"
 
 [node name="InstantMenuEffect" parent="CanvasLayer/SettingsMenu" instance=ExtResource("2_uxiku")]
-menu_group = 0
 
 [node name="MultiOne" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 2
