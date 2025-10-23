@@ -31,12 +31,14 @@ func register(menu):
 		print("MenuManager ::: Registering effect:%s to group:%s on parent:%s" % [menu.name, _enum_name(MenuConstants.MenuGroup,menu.menu_group), menu.parent.name])
 		menu.tree_exiting.connect(_on_menu_effect_exiting.bind(menu))
 		_menu_dict[menu.menu_group].append(menu)
+
+		# todo: Right now, when a group starts, we'll get an event for each menu, but we really only need one per group when all have finished
 		menu.activate_started.connect(_bubble_as.bind(menu.menu_group))
 		menu.activate_finished.connect(_bubble_af.bind(menu.menu_group))
 		menu.deactivate_started.connect(_bubble_ds.bind(menu.menu_group))
 		menu.deactivate_finished.connect(_bubble_df.bind(menu.menu_group))
 	else:
-		printerr("Can't register menu: %s" % menu.name)
+		printerr("MenuManager ::: Can't register menu: %s" % menu.name)
 
 ## Activate menus with the given MenuConstants.MenuGroup
 func activate_menu(menu_group: MenuConstants.MenuGroup, hide_others: bool = false):

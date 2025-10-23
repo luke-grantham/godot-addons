@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfsp85qndt8lh"]
+
+[ext_resource type="Script" uid="uid://blsordgb5s7ls" path="res://addons/menu_manager/menu_effect/impl/fade_menu_effect/fade_menu_effect.gd" id="1_5mm55"]
+
+[node name="FadeMenuEffect" type="Node"]
+script = ExtResource("1_5mm55")
